@@ -1,0 +1,91 @@
+:root {
+  --orange: #cc3700;
+  --black: black;
+  --text-blur: 1px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  font-family: 'Archivo', sans-serif;
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Main */
+
+.row {
+  width: 100vw;
+  height: 25vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.row h1 {
+  font-size: 90px;
+  margin-left: 20px;
+  transition: transform .2s ease-out, color .3s;
+}
+
+.row h1:hover {
+  cursor: pointer;
+}
+
+.content-window {
+  height: 0px;
+  background-color: var(--orange);
+  transition: height .2s ease-out;
+}
+
+
+/* Utilities */
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-orange {
+  background-color: var(--orange);
+}
+
+.text-black-animated:hover {
+  /* transition: color .3s ease; */
+  color: var(--orange);
+  transform: translateX(20px);
+}
+
+.text-orange-animated:hover {
+  /* transition: color .3s ease; */
+  color: var(--black);
+  transform: translateX(20px);
+}
+
+.translate {
+  transform: translateX(20px);
+}
+
+/* Text */
+
+.text-orange {
+  color: var(--orange);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.text-border-orange {
+  text-shadow: -1px -1px 0 var(--orange), 1px -1px 0 var(--orange), -1px 1px 0 var(--orange), 1px 1px 0 var(--orange);
+}
+
+.text-border-black {
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
