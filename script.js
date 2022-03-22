@@ -1,5 +1,17 @@
+'use strict';
+
 let sectionExpanded = false;
 const projectsTitle = document.getElementById("projects-title");
+
+class MenuItem {
+  constructor(headerEl, contentWrapperEl, content){
+    this.headerEl = headerEl;
+    this.contentWrapperEl = contentWrapperEl;
+    this.content = content;
+  }
+
+
+}
 
 projectsTitle.onclick = e => {
   if(!sectionExpanded){
@@ -18,7 +30,7 @@ projectsTitle.onclick = e => {
 
     let el = header.parentElement.nextSibling;
 
-    while(!(el.className === "content-window")){
+    while(!(el.className === "content-wrapper")){
       el = el.nextSibling;
     }
 
@@ -40,7 +52,7 @@ projectsTitle.onclick = e => {
 
     let el = header.parentElement.nextSibling;
 
-    while(!(el.className === "content-window")){
+    while(!(el.className === "content-wrapper")){
       el = el.nextSibling;
     }
 

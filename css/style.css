@@ -39,7 +39,7 @@ a {
   cursor: pointer;
 }
 
-.content-window {
+.content-wrapper {
   height: 0px;
   background-color: var(--orange);
   transition: height .2s ease-out;
@@ -57,13 +57,11 @@ a {
 }
 
 .text-black-animated:hover {
-  /* transition: color .3s ease; */
   color: var(--orange);
   transform: translateX(20px);
 }
 
 .text-orange-animated:hover {
-  /* transition: color .3s ease; */
   color: var(--black);
   transform: translateX(20px);
 }
@@ -71,8 +69,6 @@ a {
 .translate {
   transform: translateX(20px);
 }
-
-/* Text */
 
 .text-orange {
   color: var(--orange);
