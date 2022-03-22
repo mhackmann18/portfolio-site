@@ -41,7 +41,7 @@ a {
 
 .content-wrapper {
   height: 0px;
-  background-color: var(--orange);
+  overflow: hidden;
   transition: height .2s ease-out;
 }
 
