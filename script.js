@@ -1,7 +1,9 @@
 'use strict';
 
 let sectionExpanded = false;
-const projectsTitle = document.getElementById("projects-title");
-const contentWrapper = document.getElementsByClassName("content-wrapper");
+const menuHeaders = document.getElementsByClassName("menu-header");
+const contentWrappers = document.getElementsByClassName("content-wrapper");
 
-new MenuItem(projectsTitle, contentWrapper[0]);
+for(let i = 0; i < 4; ++i){
+  new MenuItem(menuHeaders[i], contentWrappers[i]);
+}

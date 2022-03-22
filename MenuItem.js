@@ -13,13 +13,18 @@ class MenuItem {
   init(){
     this.#headerEl.onclick = () => {
       if(!this.#expanded){
-    
-        this.#headerEl.classList.remove("text-orange-animated");
-    
+
         for(let className of this.#headerEl.classList){
           if(className === "text-orange"){
+            this.#headerEl.classList.remove("text-orange-animated");
             this.#headerEl.classList.remove("text-orange");
             this.#headerEl.classList.add("text-black");
+            break;
+          } else if(className === "text-black"){
+            this.#headerEl.classList.remove("text-black-animated");
+            this.#headerEl.classList.remove("text-black");
+            this.#headerEl.classList.add("text-orange");
+            break;
           }
         }
     
@@ -28,12 +33,18 @@ class MenuItem {
         this.#contentWrapperEl.style.height = "75vh";
         this.#expanded = true;
       } else {
-        this.#headerEl.classList.add("text-orange-animated");
     
         for(let className of this.#headerEl.classList){
           if(className === "text-black"){
+            this.#headerEl.classList.add("text-orange-animated");
             this.#headerEl.classList.remove("text-black");
             this.#headerEl.classList.add("text-orange");
+            break;
+          } else if(className === "text-orange"){
+            this.#headerEl.classList.add("text-black-animated");
+            this.#headerEl.classList.remove("text-orange");
+            this.#headerEl.classList.add("text-black");
+            break;
           }
         }
     
