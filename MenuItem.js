@@ -7,10 +7,10 @@ class MenuItem {
     this.#headerEl = headerEl;
     this.#contentWrapperEl = contentWrapperEl;
     this.#expanded = false;
-    this.init();
+    this.#init();
   }
 
-  init(){
+  #init(){
     this.#headerEl.onclick = () => {
       if(!this.#expanded){
 
