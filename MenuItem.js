@@ -13,53 +13,44 @@ class MenuItem {
   #init(){
     this.#headerEl.onclick = () => {
       if(!this.#expanded){
-
-        for(let className of this.#headerEl.classList){
-          if(className === "text-orange"){
-            this.#headerEl.classList.remove("text-orange-animated");
-            this.#headerEl.classList.remove("text-orange");
-            this.#headerEl.classList.add("text-black");
-            break;
-          } else if(className === "text-black"){
-            this.#headerEl.classList.remove("text-black-animated");
-            this.#headerEl.classList.remove("text-black");
-            this.#headerEl.classList.add("text-orange");
-            break;
-          }
-        }
-    
-        this.#headerEl.classList.add("translate");
-    
-        this.#contentWrapperEl.style.height = "75vh";
+        this.#expandItem();
         this.#expanded = true;
-
-        this.#doScrolling(this.#headerEl.parentElement.getBoundingClientRect().top, 200);
       } else {
-    
-        for(let className of this.#headerEl.classList){
-          if(className === "text-black"){
-            this.#headerEl.classList.add("text-orange-animated");
-            this.#headerEl.classList.remove("text-black");
-            this.#headerEl.classList.add("text-orange");
-            break;
-          } else if(className === "text-orange"){
-            this.#headerEl.classList.add("text-black-animated");
-            this.#headerEl.classList.remove("text-orange");
-            this.#headerEl.classList.add("text-black");
-            break;
-          }
-        }
-    
-        this.#headerEl.classList.remove("translate");
-    
-        this.#contentWrapperEl.style.height = "0vh";
+        this.#collapseItem();
         this.#expanded = false;
       }
     }
   }
 
+  #expandItem(){
+    if(this.#headerEl.classList.contains("text-orange")){
+      this.#headerEl.classList.remove("text-orange-animated", "text-orange");
+      this.#headerEl.classList.add("text-black");
+    } else {
+      this.#headerEl.classList.remove("text-black-animated", "text-black");
+      this.#headerEl.classList.add("text-orange");
+    }
+
+    this.#headerEl.classList.add("translate");
+    this.#contentWrapperEl.style.height = "75vh";
+    this.#scrollToEl(this.#headerEl.parentElement.getBoundingClientRect().top, 200);
+  }
+
+  #collapseItem(){
+    if(this.#headerEl.classList.contains("text-orange")){
+      this.#headerEl.classList.add("text-black-animated", "text-black");
+      this.#headerEl.classList.remove("text-orange");
+    } else {
+      this.#headerEl.classList.add("text-orange-animated", "text-orange");
+      this.#headerEl.classList.remove("text-black");
+    }
+
+    this.#headerEl.classList.remove("translate");
+    this.#contentWrapperEl.style.height = "0vh";
+  }
+
   // Courtesy of https://stackoverflow.com/questions/17722497/scroll-smoothly-to-specific-element-on-page
-  #doScrolling(elementY, duration) { 
+  #scrollToEl(elementY, duration) { 
     var startingY = window.pageYOffset;
     var diff = elementY - startingY;
     var start;
@@ -78,6 +69,6 @@ class MenuItem {
       if (time < duration) {
         window.requestAnimationFrame(step);
       }
-    })
+    });
   }
 }
