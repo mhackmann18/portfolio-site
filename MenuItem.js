@@ -23,12 +23,12 @@ class MenuItem {
   }
 
   #expandItem(){
-    if(this.#headerEl.classList.contains("text-orange")){
-      this.#headerEl.classList.remove("text-orange-animated", "text-orange");
-      this.#headerEl.classList.add("text-black");
+    if(this.#headerEl.classList.contains("text-color-1")){
+      this.#headerEl.classList.remove("text-color-1-animated", "text-color-1");
+      this.#headerEl.classList.add("text-color-2");
     } else {
-      this.#headerEl.classList.remove("text-black-animated", "text-black");
-      this.#headerEl.classList.add("text-orange");
+      this.#headerEl.classList.remove("text-color-2-animated", "text-color-2");
+      this.#headerEl.classList.add("text-color-1");
     }
 
     this.#headerEl.classList.add("translate");
@@ -37,12 +37,12 @@ class MenuItem {
   }
 
   #collapseItem(){
-    if(this.#headerEl.classList.contains("text-orange")){
-      this.#headerEl.classList.add("text-black-animated", "text-black");
-      this.#headerEl.classList.remove("text-orange");
+    if(this.#headerEl.classList.contains("text-color-1")){
+      this.#headerEl.classList.add("text-color-2-animated", "text-color-2");
+      this.#headerEl.classList.remove("text-color-1");
     } else {
-      this.#headerEl.classList.add("text-orange-animated", "text-orange");
-      this.#headerEl.classList.remove("text-black");
+      this.#headerEl.classList.add("text-color-1-animated", "text-color-1");
+      this.#headerEl.classList.remove("text-color-2");
     }
 
     this.#headerEl.classList.remove("translate");

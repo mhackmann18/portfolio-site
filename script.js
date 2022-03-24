@@ -1,7 +1,7 @@
 'use strict';
 
 let sectionExpanded = false;
-const menuHeaders = document.getElementsByClassName("menu-header");
+const menuHeaders = document.getElementsByClassName("menu-item-header");
 const contentWrappers = document.getElementsByClassName("content-wrapper");
 
 for(let i = 0; i < 4; ++i){

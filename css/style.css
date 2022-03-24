@@ -1,6 +1,7 @@
 :root {
-  --orange: #cc3700;
-  --black: black;
+  --color-1: #cc3700;
+  --color-1: white;
+  --color-2: black;
   --text-blur: 1px;
 }
 
@@ -11,13 +12,9 @@
 }
 
 body {
-  background-color: black;
+  background-color: var(--color-1);
   font-family: 'Archivo', sans-serif;
   font-style: italic;
-}
-
-a {
-  text-decoration: none;
 }
 
 /* Main */
@@ -29,13 +26,13 @@ a {
   align-items: flex-end;
 }
 
-.row h1 {
+h1.menu-item-header {
   font-size: 90px;
   margin-left: 20px;
   transition: transform .2s ease-out, color .3s;
 }
 
-.row h1:hover {
+h1.menu-item-header:hover {
   cursor: pointer;
 }
 
@@ -43,45 +40,54 @@ a {
   height: 0px;
   overflow: hidden;
   transition: height .2s linear;
+  padding: 0 15vw;
+  display: flex;
 }
 
+section.bg-color-1 {
+  color: var(--color-2)
+}
+
+section.bg-color-2 {
+  color: var(--color-1);
+}
 
 /* Utilities */
 
-.bg-black {
-  background-color: var(--black);
+.bg-color-1 {
+  background-color: var(--color-1);
 }
 
-.bg-orange {
-  background-color: var(--orange);
+.bg-color-2 {
+  background-color: var(--color-2);
 }
 
-.text-black-animated:hover {
-  color: var(--orange);
+.text-color-1 {
+  color: var(--color-1);
+}
+
+.text-color-2 {
+  color: var(--color-2);
+}
+
+.text-color-1-animated:hover {
+  color: var(--color-2);
   transform: translateX(20px);
 }
 
-.text-orange-animated:hover {
-  color: var(--black);
+.text-color-2-animated:hover {
+  color: var(--color-1);
   transform: translateX(20px);
+}
+
+.text-border-color-1 {
+  text-shadow: -1px -1px 0 var(--color-1), 1px -1px 0 var(--color-1), -1px 1px 0 var(--color-1), 1px 1px 0 var(--color-1);
+}
+
+.text-border-color-2 {
+  text-shadow: -1px -1px 0 var(--color-2), 1px -1px 0 var(--color-2), -1px 1px 0 var(--color-2), 1px 1px 0 var(--color-2);
 }
 
 .translate {
   transform: translateX(20px);
-}
-
-.text-orange {
-  color: var(--orange);
-}
-
-.text-black {
-  color: var(--black);
-}
-
-.text-border-orange {
-  text-shadow: -1px -1px 0 var(--orange), 1px -1px 0 var(--orange), -1px 1px 0 var(--orange), 1px 1px 0 var(--orange);
-}
-
-.text-border-black {
-  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
 }
