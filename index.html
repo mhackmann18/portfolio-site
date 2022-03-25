@@ -27,23 +27,27 @@
     <h1 class="menu-item-header text-color-2 text-color-2-animated text-border-color-1">CONTACT</h1>
   </div> 
   <section class="content-wrapper bg-color-2">
-    <form action="submit">
+    <div id="contact-page">
+      <form action="submit">
+        <div>
+          <label for="name">Enter you name:</label>
+          <input type="text" id="name" name="email">
+          <label for="email">Enter your email:</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </div>
+        <button>Send Message</button>
+      </form>
       <div>
-        <label for="name">Enter you name:</label>
-        <input type="text" id="name" name="email">
-        <label for="email">Enter your email:</label>
-        <input type="email" id="email" name="email">
+        <label>Phone:</label> 
+        <p>+1 636 384 6445</p>
+        <br>
+        <label>Email:</label>
+        <p>mhackmann13@icloud.com</p>
       </div>
-      <div>
-        <label for="message">Message:</label>
-        <textarea name="message" id="message" cols="30" rows="10"></textarea>
-      </div>
-    </form>
-    <div>
-      <label>Phone:</label> 
-      <p>+1 636 384 6445</p>
-      <label>Email:</label>
-      <p>mhackmann13@icloud.com</p>
     </div>
   </section>
 
