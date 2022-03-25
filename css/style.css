@@ -125,7 +125,7 @@ section.bg-color-2 button:hover {
 /* Contact */
 
 #contact-page {
-  padding-top: 12vh;
+  padding-top: 10vh;
   display: flex;
   justify-content: space-between;
 }
@@ -166,4 +166,22 @@ label[for=name], label[for=email] {
 
 input[name=email] {
   margin-right: 8px;
+}
+
+/* About */
+
+#about-page {
+  width: 70vw;
+  padding-top: 15vh;
+  line-height: 1.6em;
+}
+
+#about-page p {
+  width: 65%;
+  float: left;
+}
+
+#about-page img {
+  float: right;
+  width: 26%;
 }
