@@ -162,6 +162,7 @@ label[for=message] {
   padding: 6px;
   font-family: var(--font-family-inputs);
   font-size: 1em;
+  resize: none;
 }
 
 #contact-page p {
