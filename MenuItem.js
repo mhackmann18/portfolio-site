@@ -23,6 +23,7 @@ class MenuItem {
   }
 
   #expandItem(){
+
     if(this.#headerEl.classList.contains("text-color-1")){
       this.#headerEl.classList.remove("text-color-1-animated", "text-color-1");
       this.#headerEl.classList.add("text-color-2");
@@ -37,6 +38,7 @@ class MenuItem {
   }
 
   #collapseItem(){
+
     if(this.#headerEl.classList.contains("text-color-1")){
       this.#headerEl.classList.add("text-color-2-animated", "text-color-2");
       this.#headerEl.classList.remove("text-color-1");

@@ -2,7 +2,6 @@
   --color-1: #cc3700;
   --color-1: white;
   --color-2: black;
-  --text-blur: 1px;
   --font-family-primary: 'Archivo', sans-serif;
   --font-family-inputs: Arial, Helvetica, sans-serif;
 }
@@ -41,6 +40,7 @@ button:hover {
   height: 25vh;
   display: flex;
   align-items: flex-end;
+  position: relative;
 }
 
 h1.menu-item-header {
@@ -122,6 +122,10 @@ section.bg-color-2 button:hover {
   transform: translateX(20px);
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 /* Contact */
 
 #contact-page {
@@ -184,4 +188,10 @@ input[name=email] {
 #about-page img {
   float: right;
   width: 26%;
+}
+
+#about-page span {
+  font-size: 1.8em;
+  display: block;
+  margin-bottom: 15px;
 }
