@@ -1,6 +1,6 @@
 :root {
   --color-1: #cc3700;
-  --color-1: white;
+  /* --color-1: white; */
   --color-2: black;
   --font-family-primary: 'Archivo', sans-serif;
   --font-family-inputs: Arial, Helvetica, sans-serif;
@@ -66,19 +66,19 @@ section.bg-color-1 {
 }
 
 section.bg-color-2 {
-  color: var(--color-1);
+  color: white;
 }
 
 section.bg-color-2 button {
-  border: 1px solid var(--color-1);
-  color: var(--color-1);
+  border: 1px solid white;
+  color: white;
   background-color: var(--color-2);
   font-family: var(--font-family-primary);
   transition: background-color .3s, color .3s;
 }
 
 section.bg-color-2 button:hover {
-  background-color: var(--color-1);
+  background-color: white;
   color: var(--color-2);
 }
 
@@ -126,6 +126,10 @@ section.bg-color-2 button:hover {
   cursor: pointer;
 }
 
+.text-white {
+  color: white; 
+}
+
 /* Contact */
 
 #contact-page {
@@ -155,7 +159,7 @@ label[for=message] {
 
 #contact-page textarea {
   width: 100%;
-  padding: 10px;
+  padding: 6px;
   font-family: var(--font-family-inputs);
   font-size: 1em;
 }
