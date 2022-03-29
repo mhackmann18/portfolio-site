@@ -28,10 +28,6 @@ button {
   padding: 10px;
 }
 
-button:hover {
-  cursor: pointer;
-}
-
 /* COMMON */
 
 .row {
@@ -48,6 +44,17 @@ h1.menu-item-header {
   margin-left: 20px;
   transition: transform .2s ease-out, color .3s;
 }
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none ;
+}
+
+.bg-color-2 .close-btn {
+  color: white;
+} 
 
 /* Mobile */
 @media screen and (max-width: 600px) {
@@ -137,10 +144,6 @@ section.bg-color-2 button:hover {
 
 .btn:hover {
   cursor: pointer;
-}
-
-.text-white {
-  color: white; 
 }
 
 /* CONTACT PAGE */

@@ -1,11 +1,13 @@
 class MenuItem {
   #headerEl;
   #contentWrapperEl;
+  #closeBtn;
   #expanded;
 
-  constructor(headerEl, contentWrapperEl){
+  constructor(headerEl, contentWrapperEl, closeBtn){
     this.#headerEl = headerEl;
     this.#contentWrapperEl = contentWrapperEl;
+    this.#closeBtn = closeBtn;
     this.#expanded = false;
     this.#init();
   }
@@ -20,9 +22,15 @@ class MenuItem {
         this.#expanded = false;
       }
     }
+
+    this.#closeBtn.onclick = () => {
+      this.#collapseItem();
+      this.#expanded = false;
+    }
   }
 
   #expandItem(){
+    this.#closeBtn.style.display = "inline-block";
 
     if(this.#headerEl.classList.contains("text-color-1")){
       this.#headerEl.classList.remove("text-color-1-animated", "text-color-1");
@@ -41,6 +49,7 @@ class MenuItem {
   }
 
   #collapseItem(){
+    this.#closeBtn.style.display = "none";
 
     if(this.#headerEl.classList.contains("text-color-1")){
       this.#headerEl.classList.add("text-color-2-animated", "text-color-2");
