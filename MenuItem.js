@@ -37,9 +37,7 @@ class MenuItem {
 
     // Get item's y position relative to the document
     let itemY = this.#headerEl.parentElement.getBoundingClientRect().top + document.documentElement.scrollTop;
-
     this.#scrollToEl(itemY, 200);
-    // console.log(this.#headerEl.parentElement.getBoundingClientRect().top);
   }
 
   #collapseItem(){
@@ -56,7 +54,7 @@ class MenuItem {
     this.#contentWrapperEl.style.height = "0vh";
   }
 
-  // Courtesy of https://stackoverflow.com/questions/17722497/scroll-smoothly-to-specific-element-on-page
+  // scrollToEl function courtesy of https://stackoverflow.com/questions/17722497
   #scrollToEl(elementY, duration) { 
     var startingY = window.pageYOffset;
     var diff = elementY - startingY;

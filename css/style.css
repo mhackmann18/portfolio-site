@@ -1,6 +1,5 @@
 :root {
-  --color-1: #cc3700;
-  /* --color-1: white; */
+  --color-1: #ad2507;
   --color-2: black;
   --font-family-primary: 'Archivo', sans-serif;
   --font-family-inputs: Arial, Helvetica, sans-serif;
@@ -33,7 +32,7 @@ button:hover {
   cursor: pointer;
 }
 
-/* Main */
+/* COMMON */
 
 .row {
   width: 100vw;
@@ -41,12 +40,26 @@ button:hover {
   display: flex;
   align-items: flex-end;
   position: relative;
+  overflow: hidden;
 }
 
 h1.menu-item-header {
-  font-size: 90px;
+  font-size: 5.5rem;
   margin-left: 20px;
   transition: transform .2s ease-out, color .3s;
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .row {
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1.menu-item-header {
+    font-size: 3.5rem;
+    margin: 0;
+  }
 }
 
 h1.menu-item-header:hover {
@@ -82,7 +95,7 @@ section.bg-color-2 button:hover {
   color: var(--color-2);
 }
 
-/* Utilities */
+/* UTLITIES */
 
 .bg-color-1 {
   background-color: var(--color-1);
@@ -130,7 +143,7 @@ section.bg-color-2 button:hover {
   color: white; 
 }
 
-/* Contact */
+/* CONTACT PAGE */
 
 #contact-page {
   padding-top: 10vh;
@@ -177,7 +190,7 @@ input[name=email] {
   margin-right: 8px;
 }
 
-/* About */
+/* ABOUT PAGE */
 
 #about-page {
   width: 70vw;

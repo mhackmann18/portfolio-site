@@ -1,10 +1,5 @@
 'use strict';
 
-document.onclick = function(e){
-  console.log(`Mouseclick Y is ${e.pageY}`);
-};
-
-let sectionExpanded = false;
 const menuHeaders = document.getElementsByClassName("menu-item-header");
 const contentWrappers = document.getElementsByClassName("content-wrapper");
 
