@@ -34,7 +34,12 @@ class MenuItem {
 
     this.#headerEl.classList.add("translate");
     this.#contentWrapperEl.style.height = "75vh";
-    this.#scrollToEl(this.#headerEl.parentElement.getBoundingClientRect().top, 200);
+
+    // Get item's y position relative to the document
+    let itemY = this.#headerEl.parentElement.getBoundingClientRect().top + document.documentElement.scrollTop;
+
+    this.#scrollToEl(itemY, 200);
+    // console.log(this.#headerEl.parentElement.getBoundingClientRect().top);
   }
 
   #collapseItem(){
