@@ -197,18 +197,14 @@ input[name=email] {
 
 #about-page {
   width: 70vw;
-  padding-top: 15vh;
   line-height: 1.6em;
+  display: flex;
+  justify-content: center;
 }
 
 #about-page p {
-  width: 65%;
-  float: left;
-}
-
-#about-page img {
-  float: right;
-  width: 26%;
+  margin-top: 20vh;
+  width: 50vw;
 }
 
 #about-page span {
