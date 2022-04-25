@@ -1,3 +1,41 @@
+<?php
+// $msg = '';
+
+// if(filter_has_var(INPUT_POST, 'submit')){
+//   $name = htmlspecialechars($_POST['name']);
+//   $email = htmlspecialechars($_POST['email']);
+//   $message = htmlspecialechars($_POST['message']);
+
+//   // Check that form fields aren't empty
+//   if(!empty($email) && !empty($name) && !empty($message)){
+//     echo 'PASSED';
+
+//     if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+//       $msg = 'Please enter a valid email';
+//     } else {
+//       $recipientEmail = 'mhackmann13@icloud.com';
+//       $subject = 'Internship Oppurtunity from ' . $name;
+//       $body = '<h2>Internship Oppurtunity</h2>
+//         <h4>Name:</h4><p>' . $name . '</p>
+//         <h4>Email:</h4><p>' . $email . '</p>
+//         <h4>Message:</h4><p>' . $message . '</p>';
+
+//       $headers = "MIME-Version: 1.0" . "\r\n";
+//       $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
+//       $headers .= "From: " . $name . "<" . $email . ">" . "\r\n";
+
+//       if(mail($recipientEmail, $subject, $body, $headers)){
+//         $msg = 'Your email has been sent';
+//       } else {
+//         $msg = 'Your email was not sent';
+//       }
+//     }
+//   } else {
+//     $msg = 'Please fill in all fields';
+//   }
+// }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +77,7 @@
   </div> 
   <section class="content-wrapper bg-color-2 text-white">
     <div id="contact-page">
-      <form>
+      <form method="post" action="./send.php">
         <div>
           <label>Enter you name:</label>
           <input type="text" id="name" name="name">
@@ -49,10 +87,10 @@
           <input type="email" id="email" name="email">
         </div>
         <div>
-          <label for="message">Message:</label>
+          <label>Message:</label>
           <textarea name="message" id="message" cols="30" rows="10"></textarea>
         </div>
-        <button class="btn">Send Message</button>
+        <button type="submit" name="submit" class="btn">Send Message</button>
       </form>
       <div>
         <label>Phone:</label> 
