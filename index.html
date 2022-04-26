@@ -39,16 +39,21 @@
   </div> 
   <section class="content-wrapper bg-color-2 text-white">
     <div id="contact-page">
-      <form>
-          <div>
-            <label>Enter you name:</label>
-            <input type="text" id="name" name="name">
-            <label>Enter your email:</label>
-            <input type="email" id="email" name="email">
-          </div>
-          <label for="message">Message:</label>
+      <form method="post" action="./send.php">
+        <div>
+          <label>Enter you name:</label>
+          <input type="text" id="name" name="name">
+        </div>
+        <div>
+          <label>Enter your email:</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div>
+          <label>Message:</label>
           <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        <button class="btn">Send Message</button>
+        </div>
+        <button type="submit" name="submit" id="submit-btn" class="btn">Send Message</button>
+        <p id="submission-message"></p>
       </form>
       <div>
         <label>Phone:</label> 
@@ -61,6 +66,7 @@
   </section>
 
   <script src="./js/MenuItem.js"></script>
+  <script src="./js/validate.js"></script>
   <script src="./js/script.js"></script>
 </body>
 </html>
