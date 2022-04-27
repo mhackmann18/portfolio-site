@@ -1,4 +1,5 @@
 <?php
+// Code courtesy of https://docs.aws.amazon.com/ses/latest/dg/send-using-smtp-programmatically.html
 
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
@@ -8,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 if(isset($_POST['name']) 
     && isset($_POST['email'])
     && isset($_POST['message'])){
-        
+
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
@@ -19,13 +20,9 @@ if(isset($_POST['name'])
     $filename = '../vendor/autoload.php';
     require $filename;
 
-    // Replace sender@example.com with your "From" address.
-    // This address must be verified with Amazon SES.
     $sender = 'matthackmann@matthackmann.com';
-    $senderName = 'Portfolio';
+    $senderName = 'My Portfolio';
 
-    // Replace recipient@example.com with a "To" address. If your account
-    // is still in the sandbox, this address must be verified.
     $recipient = 'mhackmann13@icloud.com';
 
     // Replace smtp_username with your Amazon SES SMTP user name.
@@ -34,25 +31,18 @@ if(isset($_POST['name'])
     // Replace smtp_password with your Amazon SES SMTP password.
     $passwordSmtp = 'BCy9mtLuYl2bTCOvpJvxNlFElxKj1SfO7f7oIt54KeGa';
 
-    // Specify a configuration set. If you do not want to use a configuration
-    // set, comment or remove the next line.
-    //$configurationSet = 'ConfigSet';
-
     // If you're using Amazon SES in a region other than US West (Oregon),
     // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
     // endpoint in the appropriate region.
     $host = 'email-smtp.us-west-1.amazonaws.com';
     $port = 587;
 
-    // The subject line of the email
     $subject = 'Internship Opportunity';
 
-    // The plain-text body of the email
-    $bodyText =  "Test";
+    $bodyText =  $message;
 
     // The HTML-formatted body of the email
-    $bodyHtml = '<h2>Internship Opportunity</h2>
-        <h4>Name: </h4><p>'.$name.'</p>
+    $bodyHtml = '<h4>Name: </h4><p>'.$name.'</p>
         <h4>Email: </h4><p>'.$email.'</p>
         <h4>Message: </h4><p>'.$message.'</p>';
 
@@ -67,11 +57,9 @@ if(isset($_POST['name'])
         $mail->Port       = $port;
         $mail->SMTPAuth   = true;
         $mail->SMTPSecure = 'tls';
-    //  $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
         // Specify the message recipients.
         $mail->addAddress($recipient);
-        // You can also add CC, BCC, and additional To recipients here.
 
         // Specify the content of the message.
         $mail->isHTML(true);
@@ -79,13 +67,13 @@ if(isset($_POST['name'])
         $mail->Body       = $bodyHtml;
         $mail->AltBody    = $bodyText;
         $mail->Send();
-        echo "Email sent!" , PHP_EOL;
+        echo "Thank you for your message!" , PHP_EOL;
     } catch (phpmailerException $e) {
-        echo "An error occurred. {$e->errorMessage()}", PHP_EOL; //Catch errors from PHPMailer.
+        echo "An error occurred. Please contact the site owner.{$e->errorMessage()}", PHP_EOL; //Catch errors from PHPMailer.
     } catch (Exception $e) {
-        echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.
+        echo "Email not sent. Please contact the site owner.{$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.
     }
 } else {
-    echo "There was an issue sending your email. Please return to the previous page and try again.";
+    echo "Email failed to send. Please contact the site owner.";
 }
 ?>

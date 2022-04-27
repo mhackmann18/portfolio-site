@@ -20,7 +20,6 @@ function validateFormInputs(){
   } else if(!messageInput.value){
     message = "Please enter a message";
   } else {
-    message = "Thank you for your message";
     formIsValid = true;
   }
 

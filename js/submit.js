@@ -12,11 +12,9 @@ $(function (){
         success: function () {
           alert('form was submitted');
         }
-      }).done(function (data){
-        console.log(data);
+      }).done(function (msg){
+        document.getElementById("submission-message").innerHTML = msg;
       });
-    } else {
-      console.log("There was a problem");
     }
   });
 });
