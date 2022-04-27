@@ -8,10 +8,7 @@ $(function (){
       $.ajax({
         type: 'post',
         url: 'send.php',
-        data: $('form').serialize(),
-        success: function () {
-          alert('form was submitted');
-        }
+        data: $('form').serialize()
       }).done(function (msg){
         document.getElementById("submission-message").innerHTML = msg;
       });
