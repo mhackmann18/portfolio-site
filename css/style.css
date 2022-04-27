@@ -6,6 +6,7 @@
   --font-family-inputs: Arial, Helvetica, sans-serif;
 }
 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -192,6 +193,10 @@ label[for=name], label[for=email] {
 
 input[name=email] {
   margin-right: 8px;
+}
+
+#no-refresh {
+  display: none;
 }
 
 /* ABOUT PAGE */
