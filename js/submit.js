@@ -9,7 +9,7 @@ $(function (){
         type: 'post',
         url: 'send.php',
         data: $('form').serialize()
-      }).done(function (msg){
+      }).done(msg => {
         document.getElementById("submission-message").innerHTML = msg;
       });
     }
