@@ -5,7 +5,10 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-if(isset($_POST['submit'])) {
+if(isset($_POST['name']) 
+    && isset($_POST['email'])
+    && isset($_POST['message'])){
+        
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
