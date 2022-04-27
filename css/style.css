@@ -254,3 +254,11 @@ form label {
   display: block;
   margin-bottom: 15px;
 }
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  #about-page p {
+    width: 100%;
+    margin-top: 5vh;
+  }
+}
