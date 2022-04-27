@@ -8,4 +8,4 @@ for(let i = 0; i < 4; ++i){
   new MenuItem(menuHeaders[i], contentWrappers[i], closeButtons[i]);
 }
 
-document.getElementById("submit-btn").onclick = e => validateFormInputs(e);
+// document.getElementById("submit-btn").onclick = e => validateFormInputs(e);

@@ -7,7 +7,7 @@ const messageInput = document.getElementById("message");
 const submitButton = document.getElementById("submit-btn");
 const submitMessage = document.getElementById("submission-message");
 
-function validateFormInputs(e){
+function validateFormInputs(){
   let message = "";
   let formIsValid = false;
 
@@ -26,7 +26,5 @@ function validateFormInputs(e){
 
   submitMessage.innerHTML = message;
 
-  if(!formIsValid){
-    e.preventDefault();
-  } 
+  return formIsValid;
 }
