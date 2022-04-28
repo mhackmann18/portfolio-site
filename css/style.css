@@ -15,7 +15,6 @@
 body {
   background-color: var(--color-1);
   font-family: var(--font-family-primary);
-  font-style: italic;
   font-size: 1.2em;
 }
 
@@ -42,6 +41,7 @@ button {
 
 h1.menu-item-header {
   font-size: 5.5rem;
+  font-style: italic;
   margin-left: 20px;
   transition: transform .2s ease-out, color .3s;
 }
@@ -141,6 +141,13 @@ section.bg-color-2 button:hover {
 
 .translate {
   transform: translateX(20px);
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .translate, .text-color-1-animated:hover, .text-color-2-animated:hover {
+    transform: none;
+  }
 }
 
 .btn:hover {
