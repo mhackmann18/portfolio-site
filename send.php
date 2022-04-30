@@ -6,7 +6,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require('./config/credentials.php');
+require '/var/www/html/config/credentials.php';
 
 if(isset($_POST['name']) 
     && isset($_POST['email'])
