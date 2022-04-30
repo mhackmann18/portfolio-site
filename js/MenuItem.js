@@ -40,12 +40,12 @@ class MenuItem {
       this.#headerEl.classList.add("text-color-1");
     }
 
-    this.#headerEl.classList.add("translate");
-    this.#contentWrapperEl.style.height = "75vh";
-
     // Get item's y position relative to the document
     let itemY = this.#headerEl.parentElement.getBoundingClientRect().top + document.documentElement.scrollTop;
     this.#scrollToEl(itemY, 200);
+
+    this.#headerEl.classList.add("translate");
+    this.#contentWrapperEl.style.height = "75vh";
   }
 
   #collapseItem(){

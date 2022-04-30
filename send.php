@@ -6,6 +6,8 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+require('./config/credentials.php');
+
 if(isset($_POST['name']) 
     && isset($_POST['email'])
     && isset($_POST['message'])){
@@ -26,10 +28,10 @@ if(isset($_POST['name'])
     $recipient = 'mhackmann13@icloud.com';
 
     // Replace smtp_username with your Amazon SES SMTP user name.
-    $usernameSmtp = 'AKIA5UFU5X67JVXWSSXV';
+    $usernameSmtp = $IAMUSERNAME;
 
     // Replace smtp_password with your Amazon SES SMTP password.
-    $passwordSmtp = 'BCy9mtLuYl2bTCOvpJvxNlFElxKj1SfO7f7oIt54KeGa';
+    $passwordSmtp = $IAMPASSWORD;
 
     // If you're using Amazon SES in a region other than US West (Oregon),
     // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
