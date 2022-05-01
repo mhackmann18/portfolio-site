@@ -176,6 +176,11 @@ section.bg-color-2 button:hover {
 
 #afterclass-logo {
   font-family: 'Bungee', cursive;
+  font-size: 1.8rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 18px;
+  color: black;
 }
 
 #calorie-tracker-logo {
@@ -199,6 +204,7 @@ section.bg-color-2 button:hover {
   color: gray;
   text-align: center;
   display: block;
+  font-weight: 500;
 }
 
 .project-link:hover {
@@ -305,7 +311,7 @@ form label {
 
 #about-page {
   width: 70vw;
-  line-height: 1.6em;
+  line-height: 2.2rem;
   display: flex;
   justify-content: center;
 }
