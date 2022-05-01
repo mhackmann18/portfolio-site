@@ -28,6 +28,10 @@ button {
   padding: 10px;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* COMMON */
 
 .row {
@@ -103,7 +107,7 @@ section.bg-color-2 button:hover {
   color: var(--color-2);
 }
 
-/* UTLITIES */
+/* UTILITIES */
 
 .bg-color-1 {
   background-color: var(--color-1);
@@ -143,12 +147,6 @@ section.bg-color-2 button:hover {
   transform: translateX(20px);
 }
 
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Mobile */
 @media screen and (max-width: 600px) {
   .translate, .text-color-1-animated:hover, .text-color-2-animated:hover {
@@ -160,15 +158,59 @@ section.bg-color-2 button:hover {
   cursor: pointer;
 }
 
+.center-link {
+  text-align: center;
+}
+
 /* PROJECT PAGE */
+
+#projects {
+  display: flex;
+  margin-top: 12vh;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 18px;
+}
 
 #afterclass-logo {
   font-family: 'Bungee', cursive;
 }
 
 #calorie-tracker-logo {
+  color: #333;
   font-family: 'Bungee', cursive;
   font-family: 'Encode Sans Condensed', sans-serif;
+  font-weight: 700;
+}
+
+.project-box {
+  width: 30vw;
+  line-height: 2.2rem;
+  font-size: 1.1rem;
+}
+
+.project-box p {
+  margin-bottom: 12px;
+}
+
+.project-link {
+  color: gray;
+  text-align: center;
+  display: block;
+}
+
+.project-link:hover {
+  color: lightgray;
+}
+
+#project-divider {
+  width: 1px;
+  background: lightgray;
+  height: 40vh;
+  margin-left: 55px;
+  margin-right: 55px;
 }
 
 /* CONTACT PAGE */
