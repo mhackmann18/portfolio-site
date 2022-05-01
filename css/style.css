@@ -193,11 +193,11 @@ section.bg-color-2 button:hover {
 .project-box {
   width: 30vw;
   line-height: 2.2rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .project-box p {
-  margin-bottom: 12px;
+  margin-bottom: 25px;
 }
 
 .project-link {
